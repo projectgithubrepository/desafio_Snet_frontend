@@ -102,6 +102,7 @@ function App() {
         type="submit"
         classType="btn btn-primary btn-lg pt-2 pb-0 float-end"
         style={{fontWeight: "bold"}}
+        handleClick={() => {return}}
         />
         
       </form>
@@ -128,6 +129,7 @@ function App() {
             {data?.map((user) => {
               return (
                 <UsersTableList
+                key={user?._id}
                 id={user?._id}
                 name={user?.name}
                 birthday={user?.birthday}
