@@ -6,7 +6,7 @@ function SearchTool({setFilteredUsers}) {
     const [searchName, setSearchName] = useState()
 
     function handleFilterByName() {
-        axios.get(`http://localhost:5000/users?name=${searchName}`).then((users) => {
+        axios.get(`https://apidesafiosnet.herokuapp.com/users?name=${searchName}`).then((users) => {
             setFilteredUsers(users.data)
         })
     }
