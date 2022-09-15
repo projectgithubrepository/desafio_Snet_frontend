@@ -22,25 +22,25 @@ function App() {
 
   const handleRegisterUser = (event) => {
     event.preventDefault()
-    axios.post("http://localhost:5000/users", values).then(() => {
+    axios.post("https://apidesafiosnet.herokuapp.com/users", values).then(() => {
       handleGetUsers()
     })
   }
 
   const handleDeleteUser = (user) => {
-    axios.post("http://localhost:5000/deleteUsers", user).then(() => {
+    axios.post("https://apidesafiosnet.herokuapp.com/deleteUsers", user).then(() => {
       handleGetUsers()
     })
   }
 
   const handleGetUsers = () => {
-    axios.get("http://localhost:5000/users").then((users) => {
+    axios.get("https://apidesafiosnet.herokuapp.com/users").then((users) => {
         setData(users.data)
     })
   }
 
   const handleEditUser = () => {
-    axios.patch("http://localhost:5000/users", userToEdit).then(() => {
+    axios.patch("https://apidesafiosnet.herokuapp.com/users", userToEdit).then(() => {
       handleGetUsers()
     })
   }
