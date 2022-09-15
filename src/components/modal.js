@@ -1,5 +1,6 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
+import Button from './button'
 import Modal from 'react-bootstrap/Modal';
 
 function ModalComponent({show, setShow, handleSubmit, user, setUser}) {
@@ -56,19 +57,33 @@ function ModalComponent({show, setShow, handleSubmit, user, setUser}) {
             placeholder="Senha" 
             className="form-control form-control-lg mb-3"
             onChange={handleChangeValuesToEdit}
-            minlength="6"
+            minLength="6"
             required
             />
             
             </form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" size="lg" onClick={handleClose}>
+          <Button
+            text="Fechar"
+            type="button"
+            classType="btn btn-secondary btn-lg pt-2 pb-0 float-end"
+            style={{fontWeight: "bold"}}
+            handleClick={handleClose}
+          />
+          <Button
+            text="Cadastrar"
+            type="submit"
+            classType="btn btn-primary btn-lg pt-2 pb-0 float-end"
+            style={{fontWeight: "bold"}}
+            handleClick={()=> {handleSubmit(); handleClose()}}
+          />
+          {/* <Button variant="secondary" size="lg" onClick={handleClose}>
             Fechar
           </Button>
           <Button variant="primary" size="lg" onClick={()=> {handleSubmit(); handleClose()}}>
             Editar
-          </Button>
+          </Button> */}
         </Modal.Footer>
       </Modal>
     </>

@@ -93,7 +93,7 @@ function App() {
           placeholder="Senha" 
           className="form-control form-control-lg mb-3"
           onChange={handleChangeValues}
-          minlength="6"
+          minLength="6"
           required
         />
       
