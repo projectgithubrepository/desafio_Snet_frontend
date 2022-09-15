@@ -132,7 +132,6 @@ function App() {
                 name={user?.name}
                 birthday={user?.birthday}
                 email={user?.email}
-                password={user?.password}
                 onClickRemove={() => handleDeleteUser(user)}
                 onClickEdit={() => handleOpenModal(user)}
                 />
