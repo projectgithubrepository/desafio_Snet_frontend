@@ -7,7 +7,7 @@ function UsersTableList({ id, name, birthday, email, password, onClickRemove, on
             <tr>
                 <th scope="row">{id}</th>
                 <td>{name}</td>
-                <td>{birthday}</td>
+                <td>{birthday.split('-').reverse().join('/')}</td>
                 <td>{email}</td>
                 <td>{password}</td>
                 
